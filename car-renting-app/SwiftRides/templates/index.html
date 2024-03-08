@@ -1,13 +1,336 @@
 {% load static tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SwiftRides</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     {% tailwind_css %}
 </head>
 <body>
-    <h1 class="text-red-800">hello this html page</h1>
+    <header>
+        <nav>
+            <div class="logo"><img src="" alt=""></div>
+            <div class="nav-btt">
+                <div class="nav-list">
+                    <ul>
+                        <li>Log in</li>
+                        <li>Sign up</li>
+                        <li>Become a host</li>
+                        <li>How Turo works</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="searching">
+                <div class="form">
+                    <form action="post">
+                        <label for="address">Where</label>
+                        <input type="text" class="address" id="address">
+
+                        <label for="date_from">From</label>
+                        <input type="date" name="date_from" id="date_from">
+                        <input type="time" name="time-from" id="time_from">
+
+                        <label for="date_until">Until</label>
+                        <input type="date" name="date_until" id="date_until">
+                        <input type="time" name="time_until" id="time_until">
+
+                        <button type="submit">Search for cars</button>
+                    </form>
+                </div>
+                <div class="hero">
+                    <div class="hero-img"><img src="{% static 'home-page\hero-sec\main-img.jpg' %}" alt=""></div>
+                    <div class="hero-txt">
+                        <h1>Find your drive</h1>
+                        <p>Rent a car from reliable local hosts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <!-- <section class="hsw-sec">
+            <div class="hsw-sec-txt">
+                <h2>How ShiftRides works</h2>
+            </div>
+            <div class="hsw-cards">
+
+                <div class="hsw-card1">
+                    <div class="hsw-card-img">
+                        <img src="{% static 'home-page\hsw\join.jpg' %}" alt="">
+                    </div>
+                    <div class="hsw-card-text">
+                        <h3>Join in minutes</h3>
+                        <p>Apply online with a valid driver's license. Most people are approved instantly and can book a
+                            trip within minutes</p>
+                    </div>
+                </div>
+
+                <div class="hsw-card2">
+                    <div class="hsw-card-img">
+                        <img src="{% static 'home-page\hsw\drive.jpg' %}" alt="">
+                    </div>
+                    <div class="hsw-card-text">
+                        <h3>Drive on demand</h3>
+                        <p>Book a round trip car by the hour or day. Use our car sharing app to unlock and lock during
+                            your trip.</p>
+                    </div>
+                </div>
+
+                <div class="hsw-card3">
+                    <div class="hsw-card-img">
+                        <img src="{% static 'home-page\hsw\return.jpg' %}" alt="">
+                    </div>
+                    <div class="hsw-card-text">
+                        <h3>Return</h3>
+                        <p>When you're done, park the car in the same location you picked it up from, then end the trip
+                            with the app.</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <hr>
+
+        <!-- <section class="brand">
+            <div class="brand-txt">
+                <p>SwiftRdes</p>
+                <h2>Search by Brand</h2>
+                <p>Browse our selection of rental cars by brand.</p>
+            </div>
+
+            <div class="brand-card">
+
+                <div class="maruti-srzuki">
+                    <div class="maruti-srzuki-img"><img src="{% static 'home-page\brand\Maruti-Suzuki.jpg'%}" alt=""></div>
+                    <div class="maruti-srzuki-txt">Maruti Suzuki</div>
+                </div>
+
+                <div class="Toyota">
+                    <div class="Toyota-img"><img src="{% static 'home-page\brand\toyota.jpg'%}" alt=""></div>
+                    <div class="Toyota-txt">Toyota</div>
+                </div>
+                
+                <div class="Ford">
+                    <div class="Ford-img"><img src="{% static 'home-page\brand\Ford.jpg'%}" alt=""></div>
+                    <div class="Ford-txt">Ford</div>
+                </div>
+
+                <div class="Volkswagen">
+                    <div class="Volkswagen-img"><img src="{% static 'home-page\brand\Volkswagen.jpg'%}" alt=""></div>
+                    <div class="Volkswagen-txt">Volkswagen</div>
+                </div>
+
+                <div class="Tata-Motors">
+                    <div class="Tata-Motors-img"><img src="{% static 'home-page\brand\tata-motors.jpg'%}" alt=""></div>
+                    <div class="Tata-Motors-txt">Tata Motors</div>
+                </div>
+
+                <div class="jeep">
+                    <div class="jeep-img"><img src="{% static 'home-page\brand\jeep.jpg'%}" alt=""></div>
+                    <div class="jeep-txt">Jeep</div>
+                </div>
+            </div>
+        </section> -->
+
+        <hr>
+
+        <!-- <section class="cta-one">
+            <div class="cta-one-cards">
+                <div class="cta-cards-row">
+                    <div class="cta-one-card1">
+                        <div class="cta-one-card-img"><img src="{% static 'home-page\cta\1-1.png'%}" alt=""></div>
+                        <div class="cta-one-card-txt">
+                            <h1>Discover the ideal car for your outdoor adventures.</h1>
+                            <p>Navigate winter roads effortlessly in a robust 4x4 or embark on a tree-filled journey in
+                                a camper van.</p>
+                        </div>
+                        <div class="cta-one-card-btt"><button>Browse cars</button></div>
+                    </div>
+
+                    <div class="cta-one-card2">
+                        <div class="cta-one-card-img"><img src="{% static 'home-page\cta\1-2.png'%}" alt=""></div>
+                        <div class="cta-one-card-txt">
+                            <h1>Find the perfect car to unwind for the weekend</h1>
+                            <p>Navigate winter roads effortlessly in a robust 4x4 or embark on a tree-filled journey in
+                                a camper van.</p>
+                        </div>
+                        <div class="cta-one-card-btt"><button>Browse cars</button></div>
+                    </div>
+
+                    <div class="cta-one-card3">
+                        <div class="cta-one-card-img"><img src="{% static 'home-page\cta\1-3.png'%}" alt=""></div>
+                        <div class="cta-one-card-txt">
+                            <h1>Find the perfect car to unwind for the weekend</h1>
+                            <p>Navigate winter roads effortlessly in a robust 4x4 or embark on a tree-filled journey in
+                                a camper van.</p>
+                        </div>
+                        <div class="cta-one-card-btt"><button>Browse cars</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-destination">
+                <div class="dest-cards">
+                    <div class="dest-card1">
+                        <div class="dest-img "><img  src="{% static 'home-page\destination\005-bangalore.png' %}" alt="" ></div>
+                        <div class="dest-txt">Bangalore</div>
+                    </div>
+                    <div class="dest-card2">
+                        <div class="dest-img"><img src="{% static 'home-page\destination\004-mumbai.png' %}" alt=""></div>
+                        <div class="dest-txt">Mumbai</div>
+                    </div>
+                    <div class="dest-card4">
+                        <div class="dest-img"><img src="{% static 'home-page\destination\003-red-fort.png' %}" alt=""></div>
+                        <div class="dest-txt">Delhi</div>
+                    </div>
+                    <div class="dest-card5">
+                        <div class="dest-img"><img src="{% static 'home-page\destination\001-sri-ranganathasvamy.png' %}" alt=""></div>
+                        <div class="dest-txt">Chennai</div>
+                    </div>
+                    <div class="dest-card6">
+                        <div class="dest-img"><img src="{% static 'home-page\destination\002-hyderabad-charminar.png' %}" alt=""></div>
+                        <div class="dest-txt">Hyderabad</div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <hr>
+
+        <section class="cust-reviews">
+            <div class="cust-head">
+                <h2>Happy Customers</h2>
+                <p>Wide selection of cars at affordable prices</p>
+            </div>
+            <div class="cust-reviews-cards">
+                <div class="cust-card1">
+                    <span class="cust-loction">Bangalore</span>
+                    <p>“Swift Rides made renting a car so convenient and hassle-free.”</p>
+                    <img src="{% static 'home-page\peoples\1.jpg'%}" alt="">
+                    <span class="cust-name">John doe</span>
+                    <span class="cust-postion"> CEO , ADC Company</span>
+                </div>
+
+                <div class="cust-card2">
+                    <span class="cust-loction">Mumbai</span>
+                    <p>“I highly recommend Swift Rides for their excellent service and great car selection.”</p>
+                    <img src="{% static 'home-page\peoples\2.jpg'%}" alt="">
+                    <span class="cust-name">Jane Smith</span>
+                    <span class="cust-postion"> Marketing Manager, XYZ Corp</span>
+                </div>
+
+                <div class="cust-card2">
+                    <span class="cust-loction">Hyderabad</span>
+                    <p>“Using Swift Rides saved me time and money. Their platform is user-friendly and efficient.”</p>
+                    <img src="{% static 'home-page\peoples\3.jpg'%}" alt="">
+                    <span class="cust-name">David Johnson</span>
+                    <span class="cust-postion">CTO, PQR Inc</span>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="ecperiences-cars">
+            <div class="brow-experience">
+                <div class="brw-exp-card1">
+                    <div class="exp-img"><img src="{% static 'home-page\experience\Electric.jpg'%}" alt=""></div>
+                    <div class="exp-txt">Electric</div>
+                </div>
+                <div class="brw-exp-card2">
+                    <div class="exp-img"><img src="{% static 'home-page\experience\Deluxe&SuperDeluxe.jpg'%}" alt=""></div>
+                    <div class="exp-txt">Deluxe & Super Deluxe</div>
+                </div>
+                <div class="brw-exp-card3">
+                    <div class="exp-img"><img src="{% static 'home-page\experience\Pet-friendly.jpg'%}" alt=""></div>
+                    <div class="exp-txt">Pet-friendly</div>
+                </div>
+                <div class="brw-exp-card4">
+                    <div class="exp-img"><img src="{% static 'home-page\experience\convertibles.jpg'%}" alt=""></div>
+                    <div class="exp-txt">Convertibles</div>
+                </div>
+                <div class="brw-exp-card5">
+                    <div class="exp-img"><img src="{% static 'home-page\experience\allwheeldrive.jpg'%}" alt=""></div>
+                    <div class="exp-txt">All-wheel drive</div>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="hosts">
+            <h1>Meet the hosts</h1>
+            <div class="host-cards">
+                Top hosts on ShiftRides
+                <div class="host-1">
+                    <div class="host-top">
+                        <div class="host-img"><img src="{% static 'home-page\peoples\4.jpg'%}" alt=""></div>
+                        <div class="host-name">Melissa</div>
+                        All-Star host
+                        1111 trips date
+                    </div>
+                    <div class="host-com">Lorem, ipsum dolor.</div>
+                </div>
+                <div class="host-2">
+                    <div class="host-top">
+                        <div class="host-img"><img src="{% static 'home-page\peoples\5.jpg'%}" alt=""></div>
+                        <div class="host-name">Natalia Z</div>
+                        All-Star host
+                        1111 trips date
+                    </div>
+                    <div class="host-com">Lorem, ipsum dolor.</div>
+                </div>
+                <div class="host-1">
+                    <div class="host-top">
+                        <div class="host-img"><img src="{% static 'home-page\peoples\6.jpg'%}" alt=""></div>
+                        <div class="host-name">Melissa</div>
+                        All-Star host
+                        1111 trips date
+                    </div>
+                    <div class="host-com">Lorem, ipsum dolor.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="ask-que">
+            Frequently Asked Questions <br>
+            Find answers to common questions about the car renting process. <br>
+
+
+        </section>
+
+        <hr>
+
+    </main>
+
+    <footer>
+        <section>
+            <div class="first-footer-sec">
+                Logo <br>
+                <p>Stay up to date on the latest features and releases by joining our newsletter.</p>
+                <input type="email" placeholder="Your email"> <button>Subscribe</button>
+
+            </div>
+            <div class="links-footer-sec">
+                Follow us <br>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>X</li>
+                    <li>Linkedin</li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
