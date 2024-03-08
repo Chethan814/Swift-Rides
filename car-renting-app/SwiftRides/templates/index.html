@@ -6,98 +6,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftRides</title>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Playfair Display", serif;
+        }
+
+        img {
+            width: 300px;
+        }
+    </style>
+    <script src="{% static 'home-page\script_for_home\home.js'%}"></script>
     {% tailwind_css %}
 </head>
-<body>
+<body class="max-w-[350px] m-auto">
     <header>
-        <nav>
-            <div class="logo"><img src="{% static 'logos\black-logo.png'%}" alt=""></div>
-            <div class="nav-btt">
-                <div class="nav-list">
-                    <ul>
-                        <li>Log in</li>
-                        <li>Sign up</li>
-                        <li>Become a host</li>
-                        <li>How Turo works</li>
-                    </ul>
+        <nav class="">
+            <div class="top-nav w-full flex justify-between align-baseline">
+                <div class="logo "><img class="w-[4.5rem] " src="{% static 'logos\black-logo.png'%}" alt=""></div>
+                <div class="menu-i text-[2rem] relative top-[0.5rem] mr-4"><ion-icon name="menu" id="menu"></ion-icon>
                 </div>
+            </div>
+            <div class="nav-btt">
+                <div class="nav-list ">
+                    <div class="hidden">
+
+                        <ul
+                            class="text-[1.11rem]  text-[#1c1b1b] bg-white absolute left-0 top-[4rem] h-[100vh] w-full z-50">
+                            <li class="py-3 ml-4">Log in</li>
+                            <li class="py-3 ml-4">Sign up</li>
+                            <li class="py-3 ml-4">Become a host</li>
+                            <hr>
+                            <li class="py-3 ml-4">How Turo works</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </nav>
         <section>
-            <div class="searching">
-                <div class="form">
-                    <form action="post">
-                        <label for="address">Where</label>
-                        <input type="text" class="address" id="address">
+            <div class="searching  ">
+                <div class="form bg-white  absolute top-20 ml-4 rounded-lg w-[20rem] z-10">
+                    <form action="post" class="relative m-2 ">
 
-                        <label for="date_from">From</label>
-                        <input type="date" name="date_from" id="date_from">
-                        <input type="time" name="time-from" id="time_from">
+                        <label for="address" class="absolute translate-x-3 text-[0.9rem]">Where</label>
+                        <input type="text"
+                            class="address w-full rounded-md border-0 pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-transparent focus:border-none"
+                            id="address" placeholder="City,address or hotel"> <br>
+                        <hr>
+                        <label for="date_from" class="absolute translate-x-3 text-[0.9rem]">From</label>
+                        <input type="date" name="date_from" id="date_from"
+                            class="h-6 w-[9rem] my-4 rounded-md border-0 pt-4 text-gray-700  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none ">
+                        <input type="time" name="time-from" id="time_from"
+                            class="h-6 w-[9rem] my-4 rounded-md border-0 pt-4 text-gray-700  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none ">
+                        <br>
+                        <hr>
+                        <label for="date_until" class="absolute translate-x-3 text-[0.9rem]">Until</label>
+                        <input type="date" name="date_until" id="date_until"
+                            class="h-6 w-[9rem] my-4 rounded-md border-0 pt-4 text-gray-700  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none ">
+                        <input type="time" name="time_until" id="time_until"
+                            class="h-6 w-[9rem] my-4 rounded-md border-0 pt-4 text-gray-700  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none ">
+                        <br>
+                        <hr>
 
-                        <label for="date_until">Until</label>
-                        <input type="date" name="date_until" id="date_until">
-                        <input type="time" name="time_until" id="time_until">
-
-                        <button type="submit">Search for cars</button>
+                        <div class="btt w-full text-center my-2 "><button type="submit"
+                                class="w-full h-10 text-6 text-white font-bold  bg-[#9960fc]">Search for cars</button>
+                        </div>
                     </form>
                 </div>
-                <div class="hero">
-                    <div class="hero-img"><img src="{% static 'home-page\hero-sec\main-img.jpg' %}" alt=""></div>
-                    <div class="hero-txt">
-                        <h1>Find your drive</h1>
-                        <p>Rent a car from reliable local hosts.</p>
+                <div class="hero ">
+                    <div class="hero-img"><img class="object-cover h-[75vh] w-full rounded-lg shadow"
+                            src="{% static 'home-page\hero-sec\main-img.jpg' %}" alt=""></div>
+                    <div class="hero-txt w-full text-center mt-5">
+                        <h1 class="text-[2.7rem] font-[650]">Find your drive</h1>
+                        <p class="text-[1rem] font-semibold mt-3 mb-10">Rent a car from reliable local hosts.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </header>
 
     <main>
-        <!-- <section class="hsw-sec">
-            <div class="hsw-sec-txt">
-                <h2>How ShiftRides works</h2>
+        <hr class="my-12">
+        <section class="hsw-sec ">
+            <div class="hsw-sec-txt text-center">
+                <h2 class="text-[1.8rem] font-semibold mb-8">How ShiftRides works</h2>
             </div>
             <div class="hsw-cards">
 
                 <div class="hsw-card1">
-                    <div class="hsw-card-img">
-                        <img src="{% static 'home-page\hsw\join.jpg' %}" alt="">
+                    <div class="hsw-card-img mt-4 flex flex-row justify-center items-center ">
+                        <img class=" w-[7rem] h-[7rem] object-fill   rounded-full"
+                            src="{% static 'home-page\hsw\join.jpg' %}" alt="">
                     </div>
-                    <div class="hsw-card-text">
-                        <h3>Join in minutes</h3>
-                        <p>Apply online with a valid driver's license. Most people are approved instantly and can book a
+                    <div class="hsw-card-text w-full text-center mt-4 mb-10 flex flex-col ">
+                        <h3 class="text-[1.4rem] font-medium mb-2">Join in minutes</h3>
+                        <p class=" ">Apply online with a valid driver's license. Most people are approved instantly and
+                            can book a
                             trip within minutes</p>
                     </div>
                 </div>
 
                 <div class="hsw-card2">
-                    <div class="hsw-card-img">
-                        <img src="{% static 'home-page\hsw\drive.jpg' %}" alt="">
+                    <div class="hsw-card-img mt-4 flex flex-row justify-center items-center ">
+                        <img class=" w-[7rem] h-[7rem] object-cover   rounded-full"
+                            src="{% static 'home-page\hsw\drive.jpg' %}" alt="">
                     </div>
-                    <div class="hsw-card-text">
-                        <h3>Drive on demand</h3>
-                        <p>Book a round trip car by the hour or day. Use our car sharing app to unlock and lock during
+                    <div class="hsw-card-text w-full text-center mt-4 mb-10 flex flex-col ">
+                        <h3 class="text-[1.4rem] font-medium mb-2">Drive on demand</h3>
+                        <p class=" ">Book a round trip car by the hour or day. Use our car sharing app to unlock and
+                            lock during
                             your trip.</p>
                     </div>
                 </div>
 
                 <div class="hsw-card3">
-                    <div class="hsw-card-img">
-                        <img src="{% static 'home-page\hsw\return.jpg' %}" alt="">
+                    <div class="hsw-card-img mt-4 flex flex-row justify-center items-center ">
+                        <img class=" w-[7rem] h-[7rem] object-cover   rounded-full"
+                            src="{% static 'home-page\hsw\return.jpg' %}" alt="">
                     </div>
-                    <div class="hsw-card-text">
-                        <h3>Return</h3>
-                        <p>When you're done, park the car in the same location you picked it up from, then end the trip
+                    <div class="hsw-card-text w-full text-center mt-4 mb-10 flex flex-col ">
+                        <h3 class="text-[1.4rem] font-medium mb-2">Return</h3>
+                        <p class=" ">When you're done, park the car in the same location you picked it up from, then end
+                            the trip
                             with the app.</p>
                     </div>
                 </div>
             </div>
-        </section> -->
+            <div class="hsw-btt  items-center"><button
+                    class="w-full h-10 text-6 rounded-full text-white font-bold  bg-[#9960fc] ">View Pricing</button>
+            </div>
+        </section>
 
-        <hr>
+        <hr class="my-20">
 
-        <!-- <section class="brand">
+        <section class="brand">
             <div class="brand-txt">
                 <p>SwiftRdes</p>
                 <h2>Search by Brand</h2>
@@ -107,7 +156,8 @@
             <div class="brand-card">
 
                 <div class="maruti-srzuki">
-                    <div class="maruti-srzuki-img"><img src="{% static 'home-page\brand\Maruti-Suzuki.jpg'%}" alt=""></div>
+                    <div class="maruti-srzuki-img"><img src="{% static 'home-page\brand\Maruti-Suzuki.jpg'%}" alt="">
+                    </div>
                     <div class="maruti-srzuki-txt">Maruti Suzuki</div>
                 </div>
 
@@ -115,7 +165,7 @@
                     <div class="Toyota-img"><img src="{% static 'home-page\brand\toyota.jpg'%}" alt=""></div>
                     <div class="Toyota-txt">Toyota</div>
                 </div>
-                
+
                 <div class="Ford">
                     <div class="Ford-img"><img src="{% static 'home-page\brand\Ford.jpg'%}" alt=""></div>
                     <div class="Ford-txt">Ford</div>
@@ -136,7 +186,7 @@
                     <div class="jeep-txt">Jeep</div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <hr>
 
@@ -199,7 +249,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <hr>
 
@@ -245,7 +295,8 @@
                     <div class="exp-txt">Electric</div>
                 </div>
                 <div class="brw-exp-card2">
-                    <div class="exp-img"><img src="{% static 'home-page\experience\Deluxe&SuperDeluxe.jpg'%}" alt=""></div>
+                    <div class="exp-img"><img src="{% static 'home-page\experience\Deluxe&SuperDeluxe.jpg'%}" alt="">
+                    </div>
                     <div class="exp-txt">Deluxe & Super Deluxe</div>
                 </div>
                 <div class="brw-exp-card3">
@@ -307,9 +358,9 @@
             Find answers to common questions about the car renting process. <br>
 
 
-        </section>
+        </section> 
 
-        <hr>
+        <hr> -->
 
     </main>
 
