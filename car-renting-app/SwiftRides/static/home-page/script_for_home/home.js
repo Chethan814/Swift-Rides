@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     let menu = document.getElementById('menu')
     let navList = document.querySelector('.nav-list')
     let body = document.body
-    menu.addEventListener('click',function(){
+    menu.addEventListener('click', function () {
         menu.name = menu.name === 'menu' ? 'close' : 'menu'
         // console.log(navList);
         let firstChild = navList.firstElementChild;
@@ -20,5 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.add('overflow-visible');
         }
     })
+
+    
+
 
 });
