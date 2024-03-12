@@ -1221,6 +1221,10 @@ select {
   font-size: 2rem;
 }
 
+.text-\[4rem\] {
+  font-size: 4rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1228,6 +1232,10 @@ select {
 
 .font-\[650\] {
   font-weight: 650;
+}
+
+.font-black {
+  font-weight: 900;
 }
 
 .font-bold {
@@ -1276,6 +1284,11 @@ select {
 .text-\[\#9960fc\] {
   --tw-text-opacity: 1;
   color: rgb(153 96 252 / var(--tw-text-opacity));
+}
+
+.text-blue-300 {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
