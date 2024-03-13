@@ -14,5 +14,7 @@ def Login(request):
 def Signup(request):
     return render(request, 'Signup.html')
 
+
 def UserInfo(request):
-    return render(request, 'UserProfileInfo.html')
+    
+    return render(request, 'UserInformation.html')

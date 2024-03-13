@@ -16,13 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from home import views
+
+# less use the include() it appends last path in url routing
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__reload__/', include('django_browser_reload.urls')),
     path('',include('home.urls')),
-    path('Login/', include('home.urls')),
-    path('Signup/', include('home.urls')),
-    path('UserInfo/', include('home.urls')),
+    path('Login/', views.Login, name='user login'),
+    path('Signup/', views.Signup, name='user signup'),
+    path('UserInfo/', views.UserInfo, name='user Info'),
     
 ]

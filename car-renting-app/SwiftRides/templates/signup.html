@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'basic.html' %}
 
 <!-- this for template inheritance when extends the base.html  -->
 
@@ -10,7 +10,7 @@
 
     <div class="heading">
         <h1 class="main-heading text-[2rem] text-center text-[#1b1b1b] font-semibold 
-             sm:text-[2.6rem] "> Welcome to ShiftRides </h1>
+             sm:text-[2.6rem] "><a href="{% url 'home' %}">Welcome to ShiftRides </a></h1>
     </div>
 
 
@@ -46,7 +46,7 @@
 
                     <div class="text-center w-full">
 
-                        Already have an account?<p class="text-[#9978d2] "><a href="{% url 'Login' %}">Login</a></p>
+                        Already have an account?<p class="text-[#9978d2] "><a href="{% url 'user login' %}">Login</a></p>
                     </div>
 
                     <br>
