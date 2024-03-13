@@ -789,6 +789,10 @@ select {
   left: 0px;
 }
 
+.right-\[40\%\] {
+  right: 40%;
+}
+
 .right-\[7rem\] {
   right: 7rem;
 }
@@ -805,72 +809,12 @@ select {
   top: 0.5rem;
 }
 
-.top-\[4rem\] {
-  top: 4rem;
-}
-
-.top-\[-2px\] {
-  top: -2px;
-}
-
-.top-\[px\] {
-  top: px;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[0\] {
-  top: 0;
-}
-
-.top-\[1px\] {
-  top: 1px;
-}
-
-.top-\[2px\] {
-  top: 2px;
-}
-
-.top-\[4px\] {
-  top: 4px;
-}
-
 .top-\[10px\] {
   top: 10px;
 }
 
-.right-\[rem\] {
-  right: rem;
-}
-
-.right-\[\] {
-  right: ;
-}
-
-.right-\[50\] {
-  right: 50;
-}
-
-.right-\[50\%\] {
-  right: 50%;
-}
-
-.right-\[55\%\] {
-  right: 55%;
-}
-
-.right-\[5\%\] {
-  right: 5%;
-}
-
-.right-\[45\%\] {
-  right: 45%;
-}
-
-.right-\[40\%\] {
-  right: 40%;
+.top-\[4rem\] {
+  top: 4rem;
 }
 
 .z-10 {
@@ -923,6 +867,11 @@ select {
   margin-bottom: 5rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -941,11 +890,6 @@ select {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 
 .mb-10 {
@@ -992,6 +936,10 @@ select {
   margin-top: -6px;
 }
 
+.mt-\[1rem\] {
+  margin-top: 1rem;
+}
+
 .mt-\[3rem\] {
   margin-top: 3rem;
 }
@@ -1002,14 +950,6 @@ select {
 
 .mt-\[5rem\] {
   margin-top: 5rem;
-}
-
-.mt-\[2rem\] {
-  margin-top: 2rem;
-}
-
-.mt-\[1rem\] {
-  margin-top: 1rem;
 }
 
 .block {
