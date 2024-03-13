@@ -5,6 +5,8 @@ from django.shortcuts import render,HttpResponse
 def index(request):
     return render(request, 'index.html')
 
-
-def login(request):
+def Login(request):
     return render(request, 'UserLogin.html')
+
+def Signup(request):
+    return render(request, 'signup.html')
