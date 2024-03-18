@@ -25,7 +25,8 @@
             <!-- this form for sign up page -->
 
             <div class="login-email w-full  ">
-                <form action="">
+                <form method="post">
+                    {% csrf_token %}
 
                     <!-- email for sign up -->
 
@@ -35,9 +36,9 @@
 
                     <!-- password for signup -->
 
-                    <input type="password" name="password" id="password" placeholder="Password" required
+                    <input type="password" name="password1" id="password" placeholder="Password" required
                         class=" w-full my-4  bg-white rounded-lg  "> <br>
-                    <input type="password" name="password" id="password" placeholder="Confirm Password" required
+                    <input type="password" name="password2" id="password" placeholder="Confirm Password" required
                         class=" w-full my-4  bg-white rounded-lg  ">
 
                     <br>
@@ -46,7 +47,7 @@
 
                     <div class="text-center w-full">
 
-                        Already have an account?<p class="text-[#9978d2] "><a href="{% url 'user login' %}">Login</a></p>
+                        Already have an account?<p class="text-[#9978d2] "><a href="{% url 'login' %}">Login</a></p>
                     </div>
 
                     <br>

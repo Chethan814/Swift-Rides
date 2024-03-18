@@ -17,15 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home import views
+from user_profile import views as user_views
 
 # less use the include() it appends last path in url routing
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__reload__/', include('django_browser_reload.urls')),
-    path('',include('home.urls')),
-    path('Login/', views.Login, name='user login'),
-    path('Signup/', views.Signup, name='user signup'),
-    path('UserInfo/', views.UserInfo, name='user Info'),
-    
+    path('', include('home.urls')),
+    path('user/', include('user_profile.urls')),
 ]

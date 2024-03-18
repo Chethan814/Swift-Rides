@@ -218,11 +218,13 @@
 
                             <!-- error in login and sign up, when i use url 'Login'  and  url 'Signup'  -->
 
-                            <li class="py-3 ml-4 hover:text-[#9960fc] "><a href="{% url 'user login' %}">Log in</a></li>
-                            <li class="py-3 ml-4 sm:mr-[3rem] sm:ml-0 hover:text-[#9960fc] "><a href="{% url 'user signup' %}">Sign up</a></li>
+                            <li class="py-3 ml-4 hover:text-[#9960fc] "><a href="{% url 'login' %}">Log in</a></li>
+                            <li class="py-3 ml-4 sm:mr-[3rem] sm:ml-0 hover:text-[#9960fc] "><a
+                                    href="{% url 'signup' %}">Sign up</a></li>
                             <hr class="my-4">
                             <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">FAQ</a></li>
-                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">Terms of Services</a></li>
+                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">Terms of Services</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -242,10 +244,10 @@
                         lg:w-[75vw]
                         xl:w-[75rem]  xl:ml-[5rem] xl:translate-x-[1.5rem] xl:translate-y-[1rem]
                         ">
-        
+
                     <form action="post"
                         class="relative m-2 sm:flex sm:text-center lg:w-[70vw] xl:w-[90vw] xl:left-[3rem] xl:top-[0.4rem]">
-        
+
                         <label for="address" class="absolute text-[0.9rem] sm:ml-2 md:text-[1rem]">Where</label>
                         <input type="text" class="address w-full rounded-md border-0 pt-4  text-gray-900 focus:ring-2 focus:ring-inset focus:ring-transparent focus:border-none 
                                     sm:w-[10rem] sm:h-[2rem] sm:mt-3 sm:ml-2 sm:mr-0 outline-none
@@ -253,10 +255,10 @@
                                     xl:w-[15rem] xl:h-[2.5rem]
         
                                     " id="address" placeholder="City,address or hotel"> <br>
-        
-        
-        
-        
+
+
+
+
                         <label for="date_from"
                             class="absolute sm:translate-x-[11.4rem] text-[0.9rem] md:text-[1rem] lg:translate-x-[11.5rem] xl:translate-x-[16.5rem]">From</label>
                         <input type="date" name="date_from" id="date_from" class="h-8 w-[9rem] my-4 rounded-md  pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none 
@@ -272,10 +274,10 @@
                                     xl:w-[12rem]
                                     ">
                         <br>
-        
-        
-        
-        
+
+
+
+
                         <label for="date_until"
                             class="absolute sm:translate-x-[25.5rem] text-[0.9rem] md:text-[1rem] md:translate-x-[32rem] lg:translate-x-[30rem] xl:translate-x-[40.5rem]">Until</label>
                         <input type="date" name="date_until" id="date_until" class="h-8 w-[9rem] my-4 rounded-md p-[14px] translate-y-1 pt-4 text-gray-900   focus:ring-inset focus:ring-transparent focus:border-none  border-none outline-none
@@ -290,7 +292,7 @@
                                     ">
                         <br>
                         <hr>
-        
+
                         <div class="btt w-full text-center my-2 
                                 sm:w-14 sm:pl-4 ">
                             <button type="submit" class="w-full h-10 text-6 text-white font-bold  bg-[#9960fc] 
@@ -532,7 +534,7 @@
                 </div>
 
             </div>
-            
+
 
 
         </section>
@@ -929,7 +931,7 @@
                         your travel
                         needs. Explore the world with confidence and convenience.</p>
                 </div>
-    
+
                 <div class="footer-section contact sm:w-[40vw] sm:h-[12rem]">
                     <h2 class="text-[1.5rem] mb-3 font-normal">Contact Us</h2>
                     <p>Email: Chethanchethu99339@gmail.com</p>
@@ -956,7 +958,7 @@
                         class="fa fa-instagram text-[1.6rem] hover:drop-shadow-2xl hover:text-[#9960fc]"></a>
                     &nbsp;&nbsp;&nbsp;
                 </div>
-    
+
                 <div class="footer-section links sm:w-[40vw] sm:h-[12rem]">
                     <h2 class="text-[1.5rem] mb-3 font-normal">Quick Link</h2>
                     <ul>
@@ -966,13 +968,13 @@
                         <li><a href="#" class="hover:text-[#9960fc]">FAQ</a></li>
                         <li><a href="#" class="hover:text-[#9960fc]">Terms of Service</a></li>
                     </ul>
-    
+
                 </div>
             </div>
         </div>
-    
+
         <div class="footer-content sm:hidden ">
-    
+
             <div class="footer-section social my-4">
                 <h2 class="text-[1.3rem] font-normal">Follow Us</h2>
                 <p class="font-light">Stay connected with us on social media for the latest updates and promotions.</p>
@@ -985,7 +987,7 @@
                 <a href="https://www.instagram.com/chethan3145/?utm_source=qr"
                     class="fa fa-instagram  text-[1.2rem] hover:drop-shadow-xl hover:text-[#9960fc]"></a> <br>
             </div>
-    
+
             <div class="footer-section links my-4">
                 <h2 class="text-[1.3rem] font-normal">Quick Link</h2>
                 <ul>
@@ -995,41 +997,43 @@
                     <li><a href="#" class="hover:text-[#9960fc]">FAQ</a></li>
                     <li><a href="#" class="hover:text-[#9960fc]">Terms of Service</a></li>
                 </ul>
-    
+
             </div>
-    
+
             <div class="">
                 <details class="text-[1.3rem] my-8">
                     <summary>
                         About ShiftRides
                     </summary>
                     <div class="footer-section about my-4">
-    
+
                         <p>ShiftRides is your go-to platform for hassle car rentals, offering a diverse fleet to
                             suit
                             your
                             travel needs. Explore the world with confidence and convenience.</p>
                     </div>
                 </details>
-    
+
                 <details class="text-[1.3rem] my-8">
                     <summary>Contact Us</summary>
                     <div class="footer-section contact my-4">
-    
+
                         <p>Email: Chethanchethu99339@gmail.com</p>
                         <p>Phone: +91-8147064236</p>
                         <p>Address: Bangalore,India</p>
                     </div>
                 </details>
-    
+
             </div>
         </div>
-    
+
         <hr class="my-4">
-    
+
         <div class="footer-bottom my-10">
-            <p class="text-center">&copy; 2024 <span class="hover:text-[#9960fc] underline"> ShiftRides</span>. All rights
-                reserved. | Designed by <span class="hover:text-[#9960fc] underline"><a href="https://www.linkedin.com/in/chethan-k-r-559748229/">Chethan.K.R</a></span></p>
+            <p class="text-center">&copy; 2024 <span class="hover:text-[#9960fc] underline"> ShiftRides</span>. All
+                rights
+                reserved. | Designed by <span class="hover:text-[#9960fc] underline"><a
+                        href="https://www.linkedin.com/in/chethan-k-r-559748229/">Chethan.K.R</a></span></p>
         </div>
     </footer>
 
