@@ -26,4 +26,5 @@ urlpatterns = [
     path('__reload__/', include('django_browser_reload.urls')),
     path('', include('home.urls')),
     path('user/', include('user_profile.urls')),
+    path('UserLog/', user_views.UserLog, name='UserLog'),
 ]
