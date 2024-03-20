@@ -23,15 +23,15 @@ def Login(request):
         return render(request, 'Login.html')  # Render the login page template
 
    
-@login_required
+@login_required(login_url='login')
 def UserInfo(request):
     return render(request, 'UserInformation.html')
 
 
-@login_required
+@login_required(login_url='login')
 def UserLog(request):
-    return render(request,'user.html')
-    
+    return render(request, 'user.html')
+
 
 
 def Signup(request):

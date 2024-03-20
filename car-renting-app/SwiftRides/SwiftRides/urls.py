@@ -27,5 +27,7 @@ urlpatterns = [
     path('', include('home.urls')),
     path('user/', include('user_profile.urls')),
     path('UserLog/', user_views.UserLog, name='UserLog'),
+    path('login/', user_views.Login, name='login'),
+    path('signup/', user_views.Signup, name='signup'),
     path('logout/', user_views.Logout, name='logout'),
 ]
