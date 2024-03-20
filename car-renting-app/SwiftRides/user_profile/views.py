@@ -1,16 +1,50 @@
-from django.shortcuts import render, HttpResponse
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, HttpResponse ,redirect
+from django.contrib.auth.forms import UserCreationForm 
+from django.contrib.auth.models import User
+from django.contrib.auth import login , logout , authenticate
+from django.contrib import messages
+from django.db import IntegrityError
 
 # Create your views here.
 
 def Login(request):
-    return render(request, 'Login.html')
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('UserLog')  # Redirect to some logged-in page
+        else:
+            messages.error(request, 'Invalid username or password.')  # Use error message
+            return redirect('login')  # Redirect back to login page
+    else:
+        return render(request, 'Login.html')  # Render the login page template
 
-
-def Signup(request):
-    
-    return render(request, 'Signup.html' ,{"form" : UserCreationForm})
-
+   
 
 def UserInfo(request):
     return render(request, 'UserInformation.html')
+
+def UserLog(request):
+    return render(request,'user.html')
+    
+
+
+def Signup(request):
+    if request.method == 'GET':
+        return render(request, 'Signup.html', {"form": UserCreationForm})
+    else:
+        if request.POST['password1'] == request.POST['password2']:
+            try:
+                user = User.objects.create_user(request.POST['username'], password= request.POST['password1']  )
+                user.save()
+                login(request, user)
+                return redirect('UserLog')
+            except IntegrityError:
+                return render(request,'signup.html',{'form': UserCreationForm, 'error': 'User is already exits '})
+            
+        else:
+            return render(request,'signup.html',{'form': UserCreationForm, 'error': 'Password do not match'})
+        
+            

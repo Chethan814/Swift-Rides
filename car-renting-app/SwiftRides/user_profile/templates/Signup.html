@@ -21,24 +21,29 @@
             <div class="login-txt w-full  text-[1.3rem] font-medium  flex justify-center items-center">
                 <h2>Sign up</h2>
             </div>
+            {% if error  %}
+                <span class="text-red-500">{{ error }}</span>
+            {% else %}
+                <span></span>
+            {% endif %}
 
             <!-- this form for sign up page -->
 
             <div class="login-email w-full  ">
-                <form method="post">
+                <form method="POST">
                     {% csrf_token %}
 
                     <!-- email for sign up -->
 
-                    <input type="email" name="email" id="email" placeholder="Email" required class=" w-full my-4  bg-white rounded-lg ">
+                    <input type="text" name="username" id="username" placeholder="username" required class=" w-full my-4  bg-white rounded-lg ">
 
                     <br>
 
                     <!-- password for signup -->
 
-                    <input type="password" name="password1" id="password" placeholder="Password" required
+                    <input type="password" name="password1" id="password1" placeholder="Password" required
                         class=" w-full my-4  bg-white rounded-lg  "> <br>
-                    <input type="password" name="password2" id="password" placeholder="Confirm Password" required
+                    <input type="password" name="password2" id="password2" placeholder="Confirm Password" required
                         class=" w-full my-4  bg-white rounded-lg  ">
 
                     <br>

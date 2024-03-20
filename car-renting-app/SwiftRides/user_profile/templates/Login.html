@@ -25,14 +25,21 @@
 
             <div class="login-txt w-full  text-[1.3rem] font-medium  flex justify-center items-center">
                 <h2>Log in</h2>
+
             </div>
+            <span class="text-red-600">{% if messages %}
+            {% for messages in messages %}
+            {{ messages }}
+            {% endfor %}
+            {% endif %}</span>
 
-            <div class="login-email w-full  ">
-                <form action="">
+            <div class="login-username w-full  ">
+                <form action="" method="POST">
+                    {% csrf_token %}
 
-                    <!-- email for login  -->
+                    <!-- username for login  -->
 
-                    <input type="email" name="email" id="email" placeholder="Email" required class=" w-full my-4  bg-white rounded-lg 
+                    <input type="text" name="username" id="username" placeholder="username" required class=" w-full my-4  bg-white rounded-lg 
                         
                         ">
 
@@ -62,7 +69,8 @@
                     <br>
 
                     <div class="text-center">
-                        <span>Don't have an account? <a href="{% url 'signup' %}" class="text-[#9978d2]">Sing up</a> </span>
+                        <span>Don't have an account? <a href="{% url 'signup' %}" class="text-[#9978d2]">Sing up</a>
+                        </span>
                     </div>
 
 
