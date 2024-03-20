@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login , logout , authenticate
 from django.contrib import messages
 from django.db import IntegrityError
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -22,10 +23,12 @@ def Login(request):
         return render(request, 'Login.html')  # Render the login page template
 
    
-
+@login_required
 def UserInfo(request):
     return render(request, 'UserInformation.html')
 
+
+@login_required
 def UserLog(request):
     return render(request,'user.html')
     
@@ -47,4 +50,8 @@ def Signup(request):
         else:
             return render(request,'signup.html',{'form': UserCreationForm, 'error': 'Password do not match'})
         
+        
+def Logout(request):
+    logout(request)
+    return redirect('login')
             

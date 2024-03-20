@@ -204,7 +204,7 @@
 
 
                         <ul class="text-[1.11rem] bg-white  text-[#1c1b1b]  absolute left-0 top-[4rem] h-[100vh] w-full z-50  || 
-                            sm:relative sm:left-0 sm:top-0 sm:bg-transparent sm:text-[0.9rem] sm:h-full sm:w-[30rem] sm:gap-[1rem] sm:flex sm:justify-between 
+                            sm:relative sm:left-0 sm:top-0 sm:bg-transparent sm:text-[0.9rem] sm:h-full sm:w-[30rem] sm:gap-[1rem] sm:flex sm:justify-between
                             sm:translate-x-0 
                             md:relative md:left-0 md:w-[50rem] md:text-[1rem] md:justify-end 
                             ">
@@ -218,7 +218,11 @@
 
                             <!-- error in login and sign up, when i use url 'Login'  and  url 'Signup'  -->
 
-                            
+                            <li class="py-3 ml-4 hover:text-[#9960fc] "><a href="{% url 'logout' %}">Log out</a></li>
+                            <!-- <li class="py-3 ml-4 sm:mr-[3rem] sm:ml-0 hover:text-[#9960fc] "><a
+                                    href="{% url 'signup' %}">Sign up</a></li> -->
+
+                            <hr class="my-4">
                             <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">FAQ</a></li>
                             <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">Terms of Services</a>
                             </li>
