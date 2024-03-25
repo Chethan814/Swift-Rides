@@ -47,7 +47,7 @@ ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Boots
      ```
 
 5. Access the website by adding url in browser 
-     ```
+     ```terminal
      http://127.0.0.1:8000/
      ```
 
