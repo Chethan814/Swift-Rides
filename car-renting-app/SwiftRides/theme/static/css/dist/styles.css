@@ -2110,6 +2110,10 @@ select {
     width: 75rem;
   }
 
+  .xl\:w-\[7rem\] {
+    width: 7rem;
+  }
+
   .xl\:w-\[90vw\] {
     width: 90vw;
   }

@@ -20,6 +20,9 @@ class Car(models.Model):
     mileage = models.DecimalField(max_digits=10, decimal_places=2)
     price_per_day = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
+    photo1 = models.ImageField(upload_to='cars/images',default='')
+    photo2 = models.ImageField(upload_to='cars/images', default='')
+    photo3 = models.ImageField(upload_to='cars/images', default='')
     location = models.ForeignKey(
         Location, on_delete=models.CASCADE, related_name='cars')
 

@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views
 from user_profile import views as user_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 # less use the include() it appends last path in url routing
 
@@ -31,4 +33,4 @@ urlpatterns = [
     path('login/', user_views.Login, name='login'),
     path('signup/', user_views.Signup, name='signup'),
     path('logout/', user_views.Logout, name='logout'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
