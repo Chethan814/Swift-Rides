@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -20,9 +21,6 @@ class Car(models.Model):
     mileage = models.DecimalField(max_digits=10, decimal_places=2)
     price_per_day = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
-    photo1 = models.ImageField(upload_to='cars/images',default='')
-    photo2 = models.ImageField(upload_to='cars/images', default='')
-    photo3 = models.ImageField(upload_to='cars/images', default='')
     location = models.ForeignKey(
         Location, on_delete=models.CASCADE, related_name='cars')
 
@@ -30,16 +28,6 @@ class Car(models.Model):
         return f"{self.year} {self.make} {self.model}"
 
 
-class User(models.Model):
-    username = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    email = models.EmailField()
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    # Other relevant user information
-
-    def __str__(self):
-        return self.username
 
 
 class RentalTransaction(models.Model):
