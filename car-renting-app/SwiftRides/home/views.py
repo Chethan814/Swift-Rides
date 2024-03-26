@@ -6,3 +6,6 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return render(request, 'index.html')
 
+def searching(request):
+    return HttpResponse('this is search page')
+
