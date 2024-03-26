@@ -3,8 +3,6 @@
 ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, Python, and Django. This project is an ongoing internship project given by EY, AICTE, and NextGen Edunet Foundation.
 
 [![Alt text](readme/thumbnail_wp.png)](readme/video_wp.mp4)
-![Car Image]()
-
 
 ## Features
 
@@ -49,9 +47,9 @@ ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Boots
      ```
 
 5. Access the website by adding url in browser 
-     ```
+     
      http://127.0.0.1:8000/
-     ```
+     
 
 ## Contributing
 
@@ -64,6 +62,13 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 ## Acknowledgements
 
 Special thanks to EY, AICTE, and NextGen Edunet Foundation for providing this internship opportunity and project.
+
+
+## Images
+![Car Image](readme/2.png)
+![Car Image](readme/3.png)
+![Car Image](readme/4.png)
+![Car Image](readme/5.png)
 
      
 
