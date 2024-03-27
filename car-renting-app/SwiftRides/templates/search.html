@@ -1,0 +1,45 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+
+    <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
+    {% tailwind_css %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_wrap">
+                <div class=""> <img src="{% static 'logos\swift rides.png' %}" alt=""></div>
+                <div class="">
+                    <form action="">
+                        <label for="where">where</label>
+                        <input type="search" name="search" id="search">
+
+                        <label for="from">Form</label>
+                        <input type="date" name="from_date" id="from">
+
+                        <label for="until">Until</label>
+                        <input type="date" name="until_date" id="until_date">
+
+                    </form>
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Signup</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        
+
+    </header>
+</body>
+</html>

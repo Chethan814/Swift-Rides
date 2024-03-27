@@ -7,5 +7,6 @@ def index(request):
     return render(request, 'index.html')
 
 def searching(request):
-    return HttpResponse('this is search page')
+    return render(request,'search.html')
+    # return HttpResponse('this is search page')
 

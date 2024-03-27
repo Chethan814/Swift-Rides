@@ -21,13 +21,11 @@ class Car(models.Model):
     mileage = models.DecimalField(max_digits=10, decimal_places=2)
     price_per_day = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
-    location = models.ForeignKey(
-        Location, on_delete=models.CASCADE, related_name='cars')
+    car_images = models.ImageField(upload_to='cars/images', default='')
+    locations = models.ManyToManyField(Location, related_name='cars')
 
     def __str__(self):
         return f"{self.year} {self.make} {self.model}"
-
-
 
 
 class RentalTransaction(models.Model):
