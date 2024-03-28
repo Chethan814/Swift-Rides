@@ -1,0 +1,82 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5d4cb69663.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
+
+    <script src="{% static '/home-page/script_for_home/home.js' %}"></script>
+    <script src="{% static '/home-page/script_for_home/app.js'  %}"></script>
+    {% tailwind_css %}
+
+    {% tailwind_css %}
+</head>
+<body class="max-w-[350px] m-auto select-none
+        sm:bg-red-00 sm:max-w-[750px] 
+        md:bg-blue-00 md:max-w-[1010px]
+        lg:bg-green-00 lg:max-w[1270px]
+        xl:bg-purple-00 xl:max-w-[1530px] 
+        2xl:bg-white overflow-x-hidden 
+        ">
+    <header>
+
+        <nav class=" sm:flex sm:justify-center sm:items-center ">
+            <div class="top-nav w-full flex justify-between align-baseline  ">
+                <div class="logo "><img class="w-[4.5rem] my-2 sm:ml-[2rem] md:w-[5rem] xl:w-[7rem] xl:h-[5rem]"
+                        src="{% static 'logos\swift rides.png' %}" alt=""></div>
+                <div class="menu-i text-[2rem] relative top-[0.5rem] mr-4 sm:hidden ">
+                    <ion-icon name="menu" id="menu"></ion-icon>
+                </div>
+            </div>
+            <div class="nav-btt   ">
+                <div class="nav-list ">
+                    <div class="hidden sm:block ">
+
+
+                        <ul class="text-[1.11rem] bg-white  text-[#1c1b1b]  absolute left-0 top-[4rem] h-[100vh] w-full z-50  || 
+                                sm:relative sm:left-0 sm:top-0 sm:bg-transparent sm:text-[0.8rem] sm:h-full sm:w-[30rem] sm:gap-[1rem] sm:flex sm:justify-between 
+                                sm:translate-x-0 
+                                md:relative md:left-0 md:w-[50rem] md:text-[1rem] md:justify-end 
+                                ">
+
+                            <hr class="my-4">
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] "><a href="{% url 'home' %}">Home</a></li>
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] "><a href="{% url 'search' %}">Search</a></li>
+                            <hr class="my-4 sm:hidden">
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] ">Become a host</li>
+
+                            <!-- error in login and sign up, when i use url 'Login'  and  url 'Signup'  -->
+
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] "><a href="{% url 'login' %}">Log in</a></li>
+                            <li class=" py-3 ml-4  sm:mr-[3rem] sm:ml-0 hover:text-[#9960fc] "><a
+                                    href="{% url 'signup' %}">Sign up</a></li>
+                            <hr class="my-4 sm:hidden">
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] sm:hidden"><a href="#footer">FAQ</a></li>
+                            <li class=" py-3 ml-4  hover:text-[#9960fc] sm:hidden"><a href="#footer">Terms of
+                                    Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <hr>
+
+    </header>
+</body>
+</html>

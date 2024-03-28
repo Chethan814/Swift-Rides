@@ -6,19 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftRides</title>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5d4cb69663.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
-
-    <script src="static/home-page/script_for_home/home.js"></script>
-    <script src="static/home-page/script_for_home/app.js"></script>
     {% tailwind_css %}
 
 </head>
@@ -30,51 +17,7 @@
         2xl:bg-white overflow-x-hidden 
         ">
 
-    <header>
-
-        <nav class=" sm:flex sm:justify-center sm:items-center ">
-            <div class="top-nav w-full flex justify-between align-baseline  ">
-                <div class="logo "><img class="w-[4.5rem] my-2 sm:ml-[2rem] md:w-[5rem] xl:w-[7rem] xl:h-[5rem]"
-                        src="{% static 'logos\swift rides.png' %}" alt=""></div>
-                <div class="menu-i text-[2rem] relative top-[0.5rem] mr-4 sm:hidden ">
-                    <ion-icon name="menu" id="menu"></ion-icon>
-                </div>
-            </div>
-            <div class="nav-btt   ">
-                <div class="nav-list ">
-                    <div class="hidden sm:block ">
-
-
-                        <ul class="text-[1.11rem] bg-white  text-[#1c1b1b]  absolute left-0 top-[4rem] h-[100vh] w-full z-50  || 
-                            sm:relative sm:left-0 sm:top-0 sm:bg-transparent sm:text-[0.9rem] sm:h-full sm:w-[30rem] sm:gap-[1rem] sm:flex sm:justify-center 
-                            sm:translate-x-0 
-                            md:relative md:left-0 md:w-[50rem] md:text-[1rem] md:justify-end 
-                            ">
-
-                            <hr class="my-4">
-                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden "><a href="#">Home</a></li>
-                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden "><a href="#cars">cars</a></li>
-                            <hr class="my-4">
-                            <li class="py-3 ml-4 hover:text-[#9960fc] "><a href="#hsw-sec">How it works</a></li>
-                            <li class="py-3 ml-4 hover:text-[#9960fc] ">Become a host</li>
-
-                            <!-- error in login and sign up, when i use url 'Login'  and  url 'Signup'  -->
-
-                            <li class="py-3 ml-4 hover:text-[#9960fc] "><a href="{% url 'login' %}">Log in</a></li>
-                            <li class="py-3 ml-4 sm:mr-[3rem] sm:ml-0 hover:text-[#9960fc] "><a
-                                    href="{% url 'signup' %}">Sign up</a></li>
-                            <hr class="my-4">
-                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">FAQ</a></li>
-                            <li class="py-3 ml-4 hover:text-[#9960fc] sm:hidden"><a href="#footer">Terms of Services</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </nav>
-
-    </header>
+    {% include 'includes/nav.html' %}
 
     <main>
 
@@ -763,120 +706,7 @@
 
     </main>
 
-    <footer id="footer">
-        <div class="footer-content hidden sm:block sm:w-[90vw] mx-auto mt-[3rem]">
-            <div class="sm:flex sm:justify-around sm:items-center">
-                <div class="footer-section about sm:w-[40vw] sm:h-[12rem]">
-                    <h2 class="text-[1.5rem] mb-3 font-normal">About ShiftRides</h2>
-                    <p>ShiftRides is your go-to platform for hassle-free car rentals, offering a diverse fleet to suit
-                        your travel
-                        needs. Explore the world with confidence and convenience.</p>
-                </div>
-
-                <div class="footer-section contact sm:w-[40vw] sm:h-[12rem]">
-                    <h2 class="text-[1.5rem] mb-3 font-normal">Contact Us</h2>
-                    <p>Email: Chethanchethu99339@gmail.com</p>
-                    <p>Phone: +91-8147064236</p>
-                    <p>Address: Bangalore,India</p>
-                </div>
-                </details>
-            </div>
-            <div class="sm:flex sm:justify-around  sm:items-center my-4">
-                <div class="footer-section social sm:w-[40vw] sm:h-[12rem]">
-                    <h2 class="text-[1.5rem] mb-3 font-normal">Follow Us</h2>
-                    <p class="font-light ">Stay connected with us on social media for the latest updates and promotions.
-                    </p>
-                    <a href="https://www.linkedin.com/in/chethan-k-r-559748229/"
-                        class="fa fa-linkedin text-[1.6rem] mt-4 hover:drop-shadow-2xl hover:text-[#9960fc]"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://github.com/Chethan814"
-                        class="fa fa-github text-[1.6rem] hover:drop-shadow-2xl hover:text-[#9960fc]"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://twitter.com/Chethan31450"
-                        class="fa fa-twitter text-[1.6rem] hover:drop-shadow-2xl hover:text-[#9960fc]"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href="https://www.instagram.com/chethan3145/?utm_source=qr"
-                        class="fa fa-instagram text-[1.6rem] hover:drop-shadow-2xl hover:text-[#9960fc]"></a>
-                    &nbsp;&nbsp;&nbsp;
-                </div>
-
-                <div class="footer-section links sm:w-[40vw] sm:h-[12rem]">
-                    <h2 class="text-[1.5rem] mb-3 font-normal">Quick Link</h2>
-                    <ul>
-                        <li><a href="#hero" class="hover:text-[#9960fc]">Home</a></li>
-                        <li><a href="#cars" class="hover:text-[#9960fc]">Cars</a></li>
-                        <li><a href="#hsw-sec" class="hover:text-[#9960fc]">How It Works</a></li>
-                        <li><a href="#" class="hover:text-[#9960fc]">FAQ</a></li>
-                        <li><a href="#" class="hover:text-[#9960fc]">Terms of Service</a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-content sm:hidden ">
-
-            <div class="footer-section social my-4">
-                <h2 class="text-[1.3rem] font-normal">Follow Us</h2>
-                <p class="font-light">Stay connected with us on social media for the latest updates and promotions.</p>
-                <a href="https://www.linkedin.com/in/chethan-k-r-559748229/"
-                    class="fa fa-linkedin  text-[1.2rem] hover:drop-shadow-xl hover:text-[#9960fc]"></a> <br>
-                <a href="https://github.com/Chethan814"
-                    class="fa fa-github  text-[1.2rem] hover:drop-shadow-xl hover:text-[#9960fc]"></a> <br>
-                <a href="https://twitter.com/Chethan31450"
-                    class="fa fa-twitter  text-[1.2rem] hover:drop-shadow-xl hover:text-[#9960fc]"></a> <br>
-                <a href="https://www.instagram.com/chethan3145/?utm_source=qr"
-                    class="fa fa-instagram  text-[1.2rem] hover:drop-shadow-xl hover:text-[#9960fc]"></a> <br>
-            </div>
-
-            <div class="footer-section links my-4">
-                <h2 class="text-[1.3rem] font-normal">Quick Link</h2>
-                <ul>
-                    <li><a href="#hero" class="hover:text-[#9960fc]">Home</a></li>
-                    <li><a href="#cars" class="hover:text-[#9960fc]">Cars</a></li>
-                    <li><a href="#hsw-sec" class="hover:text-[#9960fc]">How It Works</a></li>
-                    <li><a href="#" class="hover:text-[#9960fc]">FAQ</a></li>
-                    <li><a href="#" class="hover:text-[#9960fc]">Terms of Service</a></li>
-                </ul>
-
-            </div>
-
-            <div class="">
-                <details class="text-[1.3rem] my-8">
-                    <summary>
-                        About ShiftRides
-                    </summary>
-                    <div class="footer-section about my-4">
-
-                        <p>ShiftRides is your go-to platform for hassle car rentals, offering a diverse fleet to
-                            suit
-                            your
-                            travel needs. Explore the world with confidence and convenience.</p>
-                    </div>
-                </details>
-
-                <details class="text-[1.3rem] my-8">
-                    <summary>Contact Us</summary>
-                    <div class="footer-section contact my-4">
-
-                        <p>Email: Chethanchethu99339@gmail.com</p>
-                        <p>Phone: +91-8147064236</p>
-                        <p>Address: Bangalore,India</p>
-                    </div>
-                </details>
-
-            </div>
-        </div>
-
-        <hr class="my-4">
-
-        <div class="footer-bottom my-10">
-            <p class="text-center">&copy; 2024 <span class="hover:text-[#9960fc] underline"> ShiftRides</span>. All
-                rights
-                reserved. | Designed by <span class="hover:text-[#9960fc] underline"><a
-                        href="https://www.linkedin.com/in/chethan-k-r-559748229/">Chethan.K.R</a></span></p>
-        </div>
-    </footer>
+    {% include 'includes/footer.html' %}
 
 </body>
 </html>

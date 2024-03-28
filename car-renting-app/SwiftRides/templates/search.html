@@ -10,36 +10,50 @@
     <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
     {% tailwind_css %}
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav_wrap">
-                <div class=""> <img src="{% static 'logos\swift rides.png' %}" alt=""></div>
-                <div class="">
-                    <form action="">
-                        <label for="where">where</label>
-                        <input type="search" name="search" id="search">
+<body class="max-w-[350px] mx-auto select-none
+        sm:bg-red-00 sm:max-w-[750px]  
+        md:bg-blue-00 md:max-w-[1010px] 
+        lg:bg-green-00 lg:max-w[1270px] 
+        xl:bg-purple-00 xl:max-w-[1530px] 
+        2xl:bg-white overflow-x-hidden ">
+    {% include 'includes/nav.html' %}
 
-                        <label for="from">Form</label>
-                        <input type="date" name="from_date" id="from">
+    <main class="mt-[1rem] h-[100vh]">
 
-                        <label for="until">Until</label>
-                        <input type="date" name="until_date" id="until_date">
+        <form action="get" class="w-[70vw] h-[15vh] mx-auto rounded-xl flex justify-evenly items-center bg-[#f9f8f8] ">
 
-                    </form>
-                </div>
-            </div>
-            <div class="links">
-                <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'signup' %}">Signup</a></li>
-                </ul>
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex  bg-white drop-shadow-xl ">
+                <label for="where" class="absolute left-3 text-[#7f7f7f]">where</label>
+                <input type="search"
+                    class="w-full rounded-md border-0 pt-4  text-gray-900 focus:ring-2 focus:ring-inset focus:ring-transparent focus:border-none placeholder:text-black"
+                    name="search" id="search" placeholder="City or address">
             </div>
 
-        </nav>
-        
 
-    </header>
+
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex justify-center bg-white drop-shadow-xl">
+                <label for="from" class="absolute left-16 text-[#7f7f7f]">Form</label>
+                <input type="date" class="h-8 w-[9rem] my-4 rounded-md  pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none 
+                                                       border-none outline-none  p-[14px] translate-y-1"
+                    name="from_date" id="from">
+            </div>
+
+
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex justify-center bg-white drop-shadow-xl">
+                <label for="until" class="absolute left-16 text-[#7f7f7f]">Until</label>
+                <input type="date" class="h-8 w-[9rem] my-4 rounded-md  pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none 
+                                                       border-none outline-none  p-[14px] translate-y-1"
+                    name="until_date" id="until_date">
+            </div>
+
+            <div
+                class="btt card w-[15rem] h-[10vh] rounded-xl relative flex justify-center items-center bg-white drop-shadow-xl">
+                <button type="submit"
+                    class=" w-[5rem] h-[2rem] rounded-md font-semibold text-white bg-[#9960fc] hover:border-[2px] hover:border-[#9960fc] hover:text-[#9960fc] hover:bg-white">search</button>
+            </div>
+
+        </form>
+    </main>
+    {% include 'includes/footer.html' %}
 </body>
 </html>
