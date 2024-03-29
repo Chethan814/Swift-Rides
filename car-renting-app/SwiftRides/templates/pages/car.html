@@ -1,0 +1,13 @@
+{% extends 'pages/basic.html' %}
+{% load static tailwind_tags %}
+{% load static %}
+
+{% block title %} SwiftRides {% endblock %}
+
+{% block main %}
+
+<h1>{{ car.make }} {{ car.model }}</h1>
+<p>Year: {{ car.year }}</p>
+<p>Price: ${{ car.price }}</p>
+
+{% endblock %}

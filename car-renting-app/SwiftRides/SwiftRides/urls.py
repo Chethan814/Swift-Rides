@@ -25,12 +25,19 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
     path('__reload__/', include('django_browser_reload.urls')),
+    
     path('', include('home.urls')),
-    path('search/', views.searching,name='search'),
+    path('search/', views.searching, name='search'),
+    
     path('user/', include('user_profile.urls')),
     path('UserLog/', user_views.UserLog, name='UserLog'),
+    
     path('login/', user_views.Login, name='login'),
     path('signup/', user_views.Signup, name='signup'),
     path('logout/', user_views.Logout, name='logout'),
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    
+    path('car/<int:car_id>/', views.car_detail, name='car_details'),
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
