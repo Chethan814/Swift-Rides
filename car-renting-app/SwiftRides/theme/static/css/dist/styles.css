@@ -789,12 +789,12 @@ select {
   left: 0px;
 }
 
-.left-16 {
-  left: 4rem;
-}
-
 .left-3 {
   left: 0.75rem;
+}
+
+.left-\[3\.3rem\] {
+  left: 3.3rem;
 }
 
 .right-\[40\%\] {
@@ -1036,8 +1036,20 @@ select {
   height: 100vh;
 }
 
-.h-\[\] {
-  height: ;
+.min-h-\[\] {
+  min-height: ;
+}
+
+.min-h-\[100\] {
+  min-height: 100;
+}
+
+.min-h-\[100vh\] {
+  min-height: 100vh;
+}
+
+.w-\[10rem\] {
+  width: 10rem;
 }
 
 .w-\[13rem\] {
@@ -1094,6 +1106,10 @@ select {
 
 .max-w-\[350px\] {
   max-width: 350px;
+}
+
+.max-w-\[60vw\] {
+  max-width: 60vw;
 }
 
 .translate-x-\[\.5rem\] {
@@ -1217,6 +1233,11 @@ select {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-white {

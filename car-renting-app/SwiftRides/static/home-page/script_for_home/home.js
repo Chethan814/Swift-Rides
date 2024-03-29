@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
+    document.getElementById('search').placeholder = 'City or address';
+
+    
     
 
 

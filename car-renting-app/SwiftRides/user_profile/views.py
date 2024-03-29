@@ -20,23 +20,23 @@ def Login(request):
             messages.error(request, 'Invalid username or password.')  # Use error message
             return redirect('login')  # Redirect back to login page
     else:
-        return render(request, 'Login.html')  # Render the login page template
+        return render(request, 'pages/Login.html')  # Render the login page template
 
    
 @login_required(login_url='login')
 def UserInfo(request):
-    return render(request, 'UserInformation.html')
+    return render(request, 'user/UserInformation.html')
 
 
 @login_required(login_url='login')
 def UserLog(request):
-    return render(request, 'user.html')
+    return render(request, 'user/user.html')
 
 
 
 def Signup(request):
     if request.method == 'GET':
-        return render(request, 'Signup.html', {"form": UserCreationForm})
+        return render(request, 'pages/Signup.html', {"form": UserCreationForm})
     else:
         if request.POST['password1'] == request.POST['password2']:
             try:
@@ -45,10 +45,10 @@ def Signup(request):
                 login(request, user)
                 return redirect('UserLog')
             except IntegrityError:
-                return render(request,'signup.html',{'form': UserCreationForm, 'error': 'User is already exits '})
+                return render(request,'pages/signup.html',{'form': UserCreationForm, 'error': 'User is already exits '})
             
         else:
-            return render(request,'signup.html',{'form': UserCreationForm, 'error': 'Password do not match'})
+            return render(request,'pages/signup.html',{'form': UserCreationForm, 'error': 'Password do not match'})
         
         
 def Logout(request):

@@ -1,0 +1,62 @@
+{% extends 'pages/basic.html' %}
+{% load static tailwind_tags %}
+{% load static %}
+
+{% block title %} SwiftRides {% endblock %}
+
+{% block main %}
+<main class="mt-[1rem] min-h-[100vh] ">
+
+    <section class="search">
+        <form method="GET" class="w-[70vw] h-[15vh] mx-auto rounded-xl flex justify-evenly items-center  bg-[#f9f8f8] ">
+            {% csrf_token %}
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex  bg-white drop-shadow-xl ">
+                <label for="where" class="absolute left-3 text-[#7f7f7f]">where</label>
+                <input type="search"
+                    class="w-full rounded-md border-0 pt-4  text-gray-900 focus:ring-2 focus:ring-inset focus:ring-transparent focus:border-none placeholder:text-black"
+                    name="search" id="search" placeholder="City or address" value="{{ query }}">
+            </div>
+
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex justify-center bg-white drop-shadow-xl">
+                <label for="from" class="absolute left-[3.3rem] text-[#7f7f7f]">Form</label>
+                <input type="date" class="h-8 w-[10rem] my-4 rounded-md  pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none 
+                                                                   border-none outline-none  p-[14px] translate-y-1"
+                    name="start_date" id="from" value="{{ request.GET.start_date }}">
+            </div>
+
+            <div class="card w-[15rem] h-[10vh] rounded-xl relative flex justify-center bg-white drop-shadow-xl">
+                <label for="until" class="absolute left-[3.3rem] text-[#7f7f7f]">Until</label>
+                <input type="date" class="h-8 w-[10rem] my-4 rounded-md  pt-4 text-gray-900  placeholder:text-gray-400 focus:ring-inset focus:ring-transparent focus:border-none 
+                                                                   border-none outline-none  p-[14px] translate-y-1"
+                    name="end_date" id="until_date" value="{{ request.GET.end_date }}">
+            </div>
+
+            <div
+                class="btt card w-[15rem] h-[10vh] rounded-xl relative flex justify-center items-center bg-white drop-shadow-xl">
+                <button type="submit"
+                    class=" w-[5rem] h-[2rem] rounded-md font-semibold text-white bg-[#9960fc] hover:border-[2px] hover:border-[#9960fc] hover:text-[#9960fc] hover:bg-white">search</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="max-w-[60vw] mx-auto bg-red-500">
+        {% for car in results %}
+        <div class="">
+            <img src="{{ car.car_images.url }}" alt="{{ car.make }} {{ car.model }}" class="card-img-top">
+            <div class="">
+                <h5 class="">{{ car.make }} {{ car.model }}</h5>
+                <p class="">Year: {{ car.year }}</p>
+                <p class="">Color: {{ car.color }}</p>
+
+                <p class="card-text">Locations:
+                    {% for location in car.locations.all %}
+                    {{ location.city }},
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+
+{% endblock %}
