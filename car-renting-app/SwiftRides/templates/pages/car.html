@@ -6,8 +6,16 @@
 
 {% block main %}
 
-<h1>{{ car.make }} {{ car.model }}</h1>
-<p>Year: {{ car.year }}</p>
-<p>Price: ${{ car.price_per_day }}</p>
+<main class="min-h-[80vh] ">
+
+    <div class="w-full"><img src="{{car.car_images.url}}" alt="{{ car.make }} {{ car.model }}"
+            class="max-w-none w-[23.5rem] translate-x-[-0.83rem]"></div>
+
+    <span class="font-medium text-[1.5rem]"> {{ car.make }} {{ car.model }} </span> <br>
+    <span>Year: {{ car.year }} </span> <br>
+    <div class="">
+        <span class="fixed bottom-0">Price: ${{ car.price_per_day }} </span> <br>
+    </div>
+</main>
 
 {% endblock %}
