@@ -123,80 +123,105 @@
                     <ul class="carousel ">
                         <li class="drop-shadow-lg hover:text-[#9960fc] font-bold ">
                             <div class="card  sm:w-[2rem] md:w-[7rem] h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover " src="/static/home-page/brand/Ford.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Ford</h2>
-                            </div>
 
-                        </li>
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/jeep.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Jeep</h2>
-                            </div>
+                                <a href="{% url 'car_detail_by_make' 'Ford' %}">
+                                    <img class="w-[14rem] h-[11rem] object-cover "
+                                        src="/static/home-page/brand/Ford.jpg" alt="">
+                                </a>
 
-                        </li>
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover"
-                                    src="/static/home-page/brand/Maruti-Suzuki.jpg" alt="">
                             </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Maruti-Suzuki</h2>
-                            </div>
-
-                        </li>
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/nissan.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Nissan</h2>
-                            </div>
-
-                        </li>
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover"
-                                    src="/static/home-page/brand/tata-motors.jpg" alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Tata</h2>
-                            </div>
-
-                        </li>
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/toyota.jpg"
-                                    alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Toyota</h2>
-                            </div>
-
-                        </li>
-
-                        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
-                            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
-                                <img class="w-[14rem] h-[11rem] object-cover"
-                                    src="/static/home-page/brand/Volkswagen.jpg" alt="">
-                            </div>
-                            <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
-                                <h2>Volkswagen</h2>
-                            </div>
-
-                        </li>
-                    </ul>
-
+                            <a href="{% url 'car_detail_by_make' 'Ford' %}">
+                                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                                    <h2>Ford</h2>
+                            </a>
                 </div>
-            </section>
+
+                </li>
+                <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+                    <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                        <a href="{% url 'car_detail_by_make' 'Jeep' %}">
+                            <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/jeep.jpg" alt="">
+                        </a>
+                    </div>
+                    <a href="{% url 'car_detail_by_make' 'Jeep' %}">
+                        <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                            <h2>Jeep</h2>
+                    </a>
         </div>
+
+        </li>
+        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                <a href="{% url 'car_detail_by_make' 'Maruti Suzuki' %}">
+                    <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/Maruti-Suzuki.jpg"
+                        alt="">
+                </a>
+            </div>
+            <a href="{% url 'car_detail_by_make' 'Maruti Suzuki' %}">
+                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                    <h2>Maruti-Suzuki</h2>
+            </a>
+            </div>
+
+        </li>
+        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                <a href="{% url 'car_detail_by_make' 'Nissan' %}">
+                    <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/nissan.jpg" alt="">
+                </a>
+            </div>
+            <a href="{% url 'car_detail_by_make' 'Nissan' %}">
+                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                    <h2>Nissan</h2>
+            </a>
+            </div>
+
+        </li>
+        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                <a href="{% url 'car_detail_by_make' 'Tata Motors' %}">
+                    <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/tata-motors.jpg" alt="">
+                </a>
+            </div>
+            <a href="{% url 'car_detail_by_make' 'Tata Motors' %}">
+                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                    <h2>Tata</h2>
+            </a>
+            </div>
+
+        </li>
+        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                <a href="{% url 'car_detail_by_make' 'JeeToyota' %}">
+                    <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/toyota.jpg" alt="">
+                </a>
+            </div>
+            <a href="{% url 'car_detail_by_make' 'JeeToyota' %}">
+                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                    <h2>Toyota</h2>
+            </a>
+            </div>
+
+        </li>
+
+        <li class="drop-shadow-lg hover:text-[#9960fc] font-bold">
+            <div class="card  sm:w-[2rem] md:w-[7rem] md:h-[16rem] overflow-hidden img">
+                <a href="{% url 'car_detail_by_make' 'Volkswagen' %}">
+                    <img class="w-[14rem] h-[11rem] object-cover" src="/static/home-page/brand/Volkswagen.jpg" alt="">
+                </a>
+            </div>
+            <a href="{% url 'car_detail_by_make' 'Volkswagen' %}">
+                <div class="card-txt translate-y-[-2rem] text-center w-[13rem]">
+                    <h2>Volkswagen</h2>
+            </a>
+            </div>
+
+        </li>
+        </ul>
+
+        </div>
+    </section>
+    </div>
     </section>
 
     <hr>
@@ -333,40 +358,55 @@
 
                     <li class="drop-shadow-xl  rounded-lg mt-4 hover:text-[#9960fc]">
                         <div class="card roud dest-card2 sm:w-[2rem] md:w-[7rem] md:h-[16rem]  ">
-                            <div class="dest-img text-center img"><img class="w-[14rem] rounded-xl object-cover"
-                                    src="static/home-page/destination/Mumbai.png" alt="">
+                            <div class="dest-img text-center img">
+                                <a href="{% url 'search' %}?destination=Mumbai">
+                                    <img class="w-[14rem] rounded-xl object-cover"
+                                        src="static/home-page/destination/Mumbai.png" alt="">
+                                </a>
                             </div>
                             <div class="dest-txt font-semibold card-txt text-center">Mumbai</div>
                         </div>
                     </li>
                     <li class="drop-shadow-xl  rounded-lg mt-4 hover:text-[#9960fc]">
                         <div class="card roud dest-card4 sm:w-[2rem] md:w-[7rem] md:h-[16rem]  ">
-                            <div class="dest-img text-center img"><img class="w-[14rem] rounded-xl object-cover"
-                                    src="static/home-page/destination/Delhi.png" alt="">
+                            <div class="dest-img text-center img">
+                                <a href="{% url 'search' %}?destination=Delhi">
+                                    <img class="w-[14rem] rounded-xl object-cover"
+                                        src="static/home-page/destination/Delhi.png" alt="">
+                                </a>
                             </div>
                             <div class="dest-txt font-semibold card-txt text-center">Delhi</div>
                         </div>
                     </li>
                     <li class="drop-shadow-xl  rounded-lg mt-4 hover:text-[#9960fc]">
                         <div class="card roud dest-card5 sm:w-[2rem] md:w-[7rem] md:h-[16rem]  ">
-                            <div class="dest-img text-center img"><img class="w-[14rem] rounded-xl object-cover"
-                                    src="static/home-page/destination/Chennai.png" alt="">
+                            <div class="dest-img text-center img">
+                                <a href="{% url 'search' %}?destination=Chennai">
+                                    <img class="w-[14rem] rounded-xl object-cover"
+                                        src="static/home-page/destination/Chennai.png" alt="">
+                                </a>
                             </div>
                             <div class="dest-txt font-semibold card-txt text-center">Chennai</div>
                         </div>
                     </li>
                     <li class="drop-shadow-xl  rounded-lg mt-4 hover:text-[#9960fc]">
                         <div class="card roud dest-card6 sm:w-[2rem] md:w-[7rem] md:h-[16rem]  ">
-                            <div class="dest-img text-center img"><img class="w-[14rem] rounded-xl object-cover"
-                                    src="static/home-page/destination/Hyderabad.png" alt="">
+                            <div class="dest-img text-center img">
+                                <a href="{% url 'search' %}?destination=Hyderabad">
+                                    <img class="w-[14rem] rounded-xl object-cover"
+                                        src="static/home-page/destination/Hyderabad.png" alt="">
+                                </a>
                             </div>
                             <div class="dest-txt font-semibold card-txt text-center">Hyderabad</div>
                         </div>
                     </li>
                     <li class="drop-shadow-xl  rounded-lg mt-4 hover:text-[#9960fc]">
                         <div class="card roud dest-card1 sm:w-[2rem] md:w-[7rem] md:h-[16rem]  ">
-                            <div class="dest-img text-center img"><img class="w-[14rem] rounded-xl object-cover"
-                                    src="static/home-page/destination/Hyderabad.png" alt="">
+                            <div class="dest-img text-center img">
+                                <a href="{% url 'search' %}?destination=Bangalore">
+                                    <img class="w-[14rem] rounded-xl object-cover"
+                                        src="static/home-page/destination/Hyderabad.png" alt="">
+                                </a>
                             </div>
                             <div class="dest-txt font-semiboldcard-txt text-center">Bangalore</div>
                         </div>

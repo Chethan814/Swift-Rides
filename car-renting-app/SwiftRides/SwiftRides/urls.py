@@ -39,5 +39,7 @@ urlpatterns = [
     path('logout/', user_views.Logout, name='logout'),
     
     path('car/<int:car_id>/', views.car_detail, name='car_details'),
+    path('car/make/<str:make>/', views.car_detail_by_make,
+         name='car_detail_by_make'),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
