@@ -9,7 +9,7 @@
 }
 
 .slide {
-    transition: 1000ms;
+    transition: 500ms;
     width: 100%;
     height: 100%;
     position: absolute;
