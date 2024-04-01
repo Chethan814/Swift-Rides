@@ -1137,6 +1137,10 @@ select {
   width: 4.5rem;
 }
 
+.w-\[4rem\] {
+  width: 4rem;
+}
+
 .w-\[5rem\] {
   width: 5rem;
 }
@@ -1163,10 +1167,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[4rem\] {
-  width: 4rem;
 }
 
 .max-w-\[20rem\] {
@@ -1386,10 +1386,6 @@ select {
   vertical-align: baseline;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .font-serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
@@ -1458,10 +1454,6 @@ select {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-\[3rem\] {
-  font-size: 3rem;
 }
 
 .font-\[650\] {
@@ -1559,10 +1551,6 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-\[rem\] {
-  color: rem;
 }
 
 .underline {
@@ -1729,10 +1717,6 @@ select {
 
   .sm\:top-\[8rem\] {
     top: 8rem;
-  }
-
-  .sm\:m-2 {
-    margin: 0.5rem;
   }
 
   .sm\:m-3 {
@@ -1995,11 +1979,6 @@ select {
     background-color: transparent;
   }
 
-  .sm\:bg-red-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-  }
-
   .sm\:object-cover {
     -o-object-fit: cover;
        object-fit: cover;
@@ -2099,10 +2078,6 @@ select {
     margin-bottom: 3rem;
   }
 
-  .md\:ml-0 {
-    margin-left: 0px;
-  }
-
   .md\:block {
     display: block;
   }
@@ -2145,18 +2120,6 @@ select {
 
   .md\:h-\[69vh\] {
     height: 69vh;
-  }
-
-  .md\:h-\[\] {
-    height: ;
-  }
-
-  .md\:h-\[3\] {
-    height: 3;
-  }
-
-  .md\:h-\[3rem\] {
-    height: 3rem;
   }
 
   .md\:w-\[10rem\] {
@@ -2231,34 +2194,6 @@ select {
     width: 90vw;
   }
 
-  .md\:w-\[\] {
-    width: ;
-  }
-
-  .md\:w-\[6\] {
-    width: 6;
-  }
-
-  .md\:w-\[6rem\] {
-    width: 6rem;
-  }
-
-  .md\:w-\[6re\] {
-    width: 6re;
-  }
-
-  .md\:w-\[3rem\] {
-    width: 3rem;
-  }
-
-  .md\:w-\[5\.rem\] {
-    width: 5.rem;
-  }
-
-  .md\:w-\[5\.5rem\] {
-    width: 5.5rem;
-  }
-
   .md\:max-w-\[1010px\] {
     max-width: 1010px;
   }
@@ -2316,11 +2251,6 @@ select {
   .md\:bg-\[\#f9f8f8\] {
     --tw-bg-opacity: 1;
     background-color: rgb(249 248 248 / var(--tw-bg-opacity));
-  }
-
-  .md\:bg-blue-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(147 197 253 / var(--tw-bg-opacity));
   }
 
   .md\:p-\[1rem\] {
@@ -2538,11 +2468,6 @@ select {
     background-color: inherit;
   }
 
-  .lg\:bg-green-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(134 239 172 / var(--tw-bg-opacity));
-  }
-
   .lg\:text-start {
     text-align: start;
   }
@@ -2637,14 +2562,6 @@ select {
     height: 70vh;
   }
 
-  .xl\:h-\[3rem\] {
-    height: 3rem;
-  }
-
-  .xl\:h-\[rem\] {
-    height: rem;
-  }
-
   .xl\:w-\[10rem\] {
     width: 10rem;
   }
@@ -2669,6 +2586,10 @@ select {
     width: 30rem;
   }
 
+  .xl\:w-\[4\.5rem\] {
+    width: 4.5rem;
+  }
+
   .xl\:w-\[65rem\] {
     width: 65rem;
   }
@@ -2681,40 +2602,12 @@ select {
     width: 75rem;
   }
 
-  .xl\:w-\[7rem\] {
-    width: 7rem;
-  }
-
   .xl\:w-\[90vw\] {
     width: 90vw;
   }
 
   .xl\:w-full {
     width: 100%;
-  }
-
-  .xl\:w-\[5rem\] {
-    width: 5rem;
-  }
-
-  .xl\:w-\[rem\] {
-    width: rem;
-  }
-
-  .xl\:w-\[6rem\] {
-    width: 6rem;
-  }
-
-  .xl\:w-\[54rem\] {
-    width: 54rem;
-  }
-
-  .xl\:w-\[4rem\] {
-    width: 4rem;
-  }
-
-  .xl\:w-\[4\.5rem\] {
-    width: 4.5rem;
   }
 
   .xl\:max-w-\[1530px\] {
@@ -2752,11 +2645,6 @@ select {
 
   .xl\:grid-flow-col {
     grid-auto-flow: column;
-  }
-
-  .xl\:bg-purple-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(216 180 254 / var(--tw-bg-opacity));
   }
 }
 
