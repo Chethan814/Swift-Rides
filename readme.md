@@ -6,11 +6,12 @@ ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Boots
 
 ## Features
 
-- User authentication: Allow users to sign up, log in, and log out (design are created , working on ). 
+- User authentication: Allow users to sign up, log in, and log out . 
 - Responsive design: Ensure the website is optimized for various devices and screen sizes.
-- Car listings: Display available cars for rent with details such as model, price, and availability (working on).
-- Booking system: Enable users to book cars for specific dates (working on).
+- Car listings: Display available cars for rent with details such as model, price, and availability .
+- Dynamic Data Fetching: Implement a server-side API that dynamically retrieves car data from the database and populates the web page without the need for creating individual HTML pages for each car. This approach will ensure that the website remains scalable and easy to update, while also providing a seamless user experience.
 - Admin panel: Provide admin access to manage cars, bookings, and users (working on).
+- Booking system: Enable users to book cars for specific dates (working on).
 
 ## Technologies Used
 
@@ -21,6 +22,7 @@ ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Boots
 - Tailwind CSS
 - Python
 - Django
+- Sqlite
 
 ## Installation
 
