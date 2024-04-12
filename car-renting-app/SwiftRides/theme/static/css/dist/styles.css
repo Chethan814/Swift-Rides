@@ -1989,11 +1989,6 @@ select {
     background-color: transparent;
   }
 
-  .sm\:bg-red-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-  }
-
   .sm\:object-cover {
     -o-object-fit: cover;
        object-fit: cover;
@@ -2268,11 +2263,6 @@ select {
     background-color: rgb(249 248 248 / var(--tw-bg-opacity));
   }
 
-  .md\:bg-blue-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(147 197 253 / var(--tw-bg-opacity));
-  }
-
   .md\:p-\[1rem\] {
     padding: 1rem;
   }
@@ -2488,11 +2478,6 @@ select {
     background-color: inherit;
   }
 
-  .lg\:bg-green-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(134 239 172 / var(--tw-bg-opacity));
-  }
-
   .lg\:text-start {
     text-align: start;
   }
@@ -2670,11 +2655,6 @@ select {
 
   .xl\:grid-flow-col {
     grid-auto-flow: column;
-  }
-
-  .xl\:bg-purple-300 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(216 180 254 / var(--tw-bg-opacity));
   }
 }
 

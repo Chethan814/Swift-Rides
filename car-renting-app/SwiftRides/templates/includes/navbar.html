@@ -18,8 +18,9 @@
 
 <nav class=" sm:flex sm:justify-center sm:items-center ">
     <div class="top-nav w-full flex justify-between items-start  ">
-        <div class="logo "><img class="w-[4rem] my-2 sm:ml-[2rem] md:w-[5rem]  xl:w-[4.5rem] "
-                src="{% static 'logos\mainLogo.jpg' %}" alt=""></div>
+        <div class="logo ">
+            <a href="{% url 'home' %}"><img class="w-[4rem] my-2 sm:ml-[2rem] md:w-[5rem]  xl:w-[4.5rem] "
+                src="{% static 'logos\mainLogo.jpg' %}" alt=""></a></div>
         <div class="menu-i text-[2rem] relative top-[0.5rem] mr-4 sm:hidden ">
             <ion-icon name="menu" id="menu"></ion-icon>
         </div>
