@@ -33,6 +33,7 @@ urlpatterns = [
     
     path('user/', include('user_profile.urls')),
     path('UserLog/', user_views.UserLog, name='UserLog'),
+    path('user_search/', user_views.user_searching, name='user_searching'),
     
     path('login/', user_views.Login, name='login'),
     path('signup/', user_views.Signup, name='signup'),

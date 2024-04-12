@@ -6,6 +6,10 @@ from django.contrib import messages
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 
+from django.http import HttpResponseNotFound
+from django.shortcuts import render, HttpResponse, get_object_or_404
+from home.models import Car, Location
+
 # Create your views here.
 
 def Login(request):
@@ -54,4 +58,20 @@ def Signup(request):
 def Logout(request):
     logout(request)
     return redirect('login')
+
+def user_searching(request):
+    query = request.GET.get('search')
+    destination = request.GET.get('destination')
+    start_date = request.GET.get('start_date')
+    start_datetime = request.GET.get('start_datetime')
+    end_date = request.GET.get('end_date')
+    end_datetime = request.GET.get('end_datetime')
+
+    results = Car.objects.all()
+    if query:
+        results = results.filter(locations__city__icontains=query)
+
+    return render(request, 'user\search.html', {'results': results, 'query': query, 'destination': destination})
+
+    # return HttpResponse('this is search page')
             
