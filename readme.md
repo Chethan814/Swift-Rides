@@ -1,4 +1,4 @@
-# ShiftRides - Car Renting Website
+# SwiftRides - Car Renting Website
 
 ShiftRides is a car renting website developed using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, Python, and Django. This project is an ongoing internship project given by EY, AICTE, and NextGen Edunet Foundation.
 
