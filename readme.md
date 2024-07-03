@@ -74,6 +74,9 @@ Special thanks to EY, AICTE, and NextGen Edunet Foundation for providing this in
 ![Car Image](readme/6.png)
 ![Car Image](readme/7.png)
 
+## Certification from the Next Gen Edunet Foundation , EY-GDS , AICTE
+![Car Image](readme\NEW_OTHER_STATE_Certificate_page-0001.jpg)
+
      
 
 
