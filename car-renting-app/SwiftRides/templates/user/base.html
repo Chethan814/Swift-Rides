@@ -2,6 +2,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,9 @@
     <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
     <script src="{% static 'home-page\script_for_home\home.js' %}"></script>
     <script src="{% static 'home-page\script_for_home\app.js' %}"></script>
-    <link rel="shortcut icon" href="{% static 'logos\swift rides.png' %}" >
+    <link rel="shortcut icon" href="{% static 'logos\swift rides.png' %}">
     {% endblock %}
-    
+
     <!-- the external links for font , icon ,  -->
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -30,12 +31,29 @@
 
     <!-- this is favicon link  -->
     <link rel="shortcut icon" href="{% static 'logos\mainlogo.jpg' %}" type="image/x-icon">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Push a new state to the history
+            history.pushState(null, null, window.location.href);
 
+            window.addEventListener('popstate', function (event) {
+                // If the back button is pressed, push the same state again
+                history.pushState(null, null, window.location.href);
+            });
+
+            // Optional: To handle the forward button as well
+            window.addEventListener('hashchange', function (event) {
+                history.pushState(null, null, window.location.href);
+            });
+        });
+    </script>
 
 
 
     {% tailwind_css %}
+
 </head>
+
 <body
     class="max-w-[350px] m-auto | sm:bg-red-00 sm:max-w-[750px] | md:bg-blue-00 md:max-w-[1010px] | lg:bg-green-00 lg:max-w[1270px] | xl:bg-purple-00 xl:max-w-[1530px] | 2xl:bg-white overflow-x-hidden ">
     {% include 'user/user_include/navbar.html' %}
@@ -48,4 +66,5 @@
 
 
 </body>
+
 </html>

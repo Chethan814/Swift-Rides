@@ -7,6 +7,23 @@
 
 {% block main %}
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            // Push a new state to the history
+            history.pushState(null, null, window.location.href);
+
+            window.addEventListener('popstate', function (event) {
+                // If the back button is pressed, push the same state again
+                history.pushState(null, null, window.location.href);
+            });
+
+            // Optional: To handle the forward button as well
+            window.addEventListener('hashchange', function (event) {
+                history.pushState(null, null, window.location.href);
+            });
+        });
+</script>
+
 <main class="mt-[1rem] min-h-[100vh]">
 
     <div class="heading">
@@ -62,13 +79,13 @@
 
                     <!-- submit for login -->
 
-                    <button type="submit"
-                        class="w-full h-8 rounded-sm  drop-shadow-sm mb-8 text-white bg-[#9960fc]">Login</button>
+                    <a target="_blank"> <button type="submit"  
+                        class="w-full h-8 rounded-sm  drop-shadow-sm mb-8 text-white bg-[#9960fc]">Login</button></a>
 
                     <br>
 
                     <div class="text-center">
-                        <span>Don't have an account? <a href="{% url 'signup' %}" class="text-[#9978d2]">Sign up</a>
+                        <span>Don't have an account? <a href="{% url 'signup' %}" target="_blank" class="text-[#9978d2]">Sign up</a>
                         </span>
                     </div>
 

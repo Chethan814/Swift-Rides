@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable Back Button</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Push a new state to the history
+            history.pushState(null, null, window.location.href);
+
+            window.addEventListener('popstate', function (event) {
+                // If the back button is pressed, push the same state again
+                history.pushState(null, null, window.location.href);
+            });
+
+            // Optional: To handle the forward button as well
+            window.addEventListener('hashchange', function (event) {
+                history.pushState(null, null, window.location.href);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Back Button Disabled</h1>
+    <p>Try pressing the back button. It should not navigate back.</p>
+</body>
+
+</html>

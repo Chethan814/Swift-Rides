@@ -8,6 +8,22 @@
 {% endblock %}
 
 {% block main %}
+<script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Push a new state to the history
+        history.pushState(null, null, window.location.href);
+
+        window.addEventListener('popstate', function (event) {
+            // If the back button is pressed, push the same state again
+            history.pushState(null, null, window.location.href);
+        });
+
+        // Optional: To handle the forward button as well
+        window.addEventListener('hashchange', function (event) {
+            history.pushState(null, null, window.location.href);
+        });
+    });
+</script>
 <main class="mt-[1rem] min-h-[100vh] mx-auto ">
 
     <section class="search  mx-auto my-10 " >
