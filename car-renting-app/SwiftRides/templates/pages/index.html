@@ -8,9 +8,10 @@
 {% block links %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
-<script src="{% static 'home-page\script_for_home\home.js' %}"></script>
-<script src="{% static 'home-page\script_for_home\app.js' %}"></script>
-<link rel="shortcut icon" href="{% static 'logos\mainlogo.jpg' %}" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'test.css' %}">
+<script src="{% static 'home-page/script_for_home/home.js' %}"></script>
+<script src="{% static 'home-page/script_for_home/app.js' %}"></script>
+<link rel="shortcut icon" href="{% static 'logos/mainlogo.jpg' %}" type="image/x-icon">
 {% endblock %}
 
 
@@ -19,6 +20,11 @@
 
 
 <main class="select-none">
+
+    <!-- Test element to verify static files are working -->
+    <div class="test-static" style="position: fixed; top: 10px; right: 10px; z-index: 9999;">
+        Static Files Test - If you see this with red background, static files are working!
+    </div>
 
     <section id="hero">
         <div class="searching  ">
