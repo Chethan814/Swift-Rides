@@ -5,10 +5,11 @@
             "use": "@vercel/python"
         }
     ],
+    "buildCommand": "bash build_files.sh",
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/static/$1"
+            "dest": "/staticfiles/$1"
         },
         {
             "src": "/media/(.*)",

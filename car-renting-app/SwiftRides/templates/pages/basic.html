@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
 
-    <!-- the linked in external css and script in static -->
+    <!-- Tailwind CSS must be loaded first -->
+    {% tailwind_css %}
 
+    <!-- the linked in external css and script in static -->
     {% block links %}
     <link rel="stylesheet" href="{% static 'home-page/style/style.css' %}">
     <script src="{% static 'home-page/script_for_home/home.js' %}"></script>
@@ -28,10 +30,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5d4cb69663.js" crossorigin="anonymous"></script>
 
-
-
-
-    {% tailwind_css %}
 </head>
 <body
     class="max-w-[350px] m-auto | sm:bg-red-00 sm:max-w-[750px] | md:bg-blue-00 md:max-w-[1010px] | lg:bg-green-00 lg:max-w[1270px] | xl:bg-purple-00 xl:max-w-[1530px] | 2xl:bg-white overflow-x-hidden ">
